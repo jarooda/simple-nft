@@ -1,3 +1,23 @@
 .App {
   text-align: center;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.fit-content {
+  width: fit-content;
+}

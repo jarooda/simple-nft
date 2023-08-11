@@ -62,7 +62,7 @@ const { ethers } = require("ethers");
 */
 
 /// 📡 What chain are your contracts deployed to?
-const targetNetwork = NETWORKS.localhost; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
+const targetNetwork = NETWORKS.sepolia; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 
 // 😬 Sorry for all the console logging
 const DEBUG = true;
@@ -521,121 +521,121 @@ function App() {
   // the json for the nfts
   const json = {
     1: {
-      description: "It's actually a bison?",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/buffalo.jpg",
-      name: "Buffalo",
+      description: "There is a plant seed on its back right from the day this POKéMON is born. The seed slowly grows larger.",
+      external_url: "https://www.serebii.net/pokedex/001.shtml", // <-- this can link to a page for the specific file too
+      image: "https://www.serebii.net/art/th/1.png",
+      name: "Bulbasaur",
       attributes: [
         {
           trait_type: "BackgroundColor",
           value: "green",
         },
         {
-          trait_type: "Eyes",
-          value: "googly",
+          trait_type: "Type",
+          value: "Grass",
         },
         {
-          trait_type: "Stamina",
+          trait_type: "Level",
           value: 42,
         },
       ],
     },
     2: {
-      description: "What is it so worried about?",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/zebra.jpg",
-      name: "Zebra",
+      description: "From the time it is born, a flame burns at the tip of its tail. Its life would end if the flame were to go out.",
+      external_url: "https://www.serebii.net/pokedex-rs/004.shtml", // <-- this can link to a page for the specific file too
+      image: "https://www.serebii.net/art/th/4.png",
+      name: "Charmander",
       attributes: [
         {
           trait_type: "BackgroundColor",
-          value: "blue",
+          value: "red",
         },
         {
-          trait_type: "Eyes",
-          value: "googly",
+          trait_type: "Type",
+          value: "Fire",
         },
         {
-          trait_type: "Stamina",
+          trait_type: "Level",
           value: 38,
         },
       ],
     },
     3: {
-      description: "What a horn!",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/rhino.jpg",
-      name: "Rhino",
-      attributes: [
-        {
-          trait_type: "BackgroundColor",
-          value: "pink",
-        },
-        {
-          trait_type: "Eyes",
-          value: "googly",
-        },
-        {
-          trait_type: "Stamina",
-          value: 22,
-        },
-      ],
-    },
-    4: {
-      description: "Is that an underbyte?",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/fish.jpg",
-      name: "Fish",
+      description: "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
+      external_url: "https://www.serebii.net/pokedex-rs/007.shtml", // <-- this can link to a page for the specific file too
+      image: "https://www.serebii.net/art/th/7.png",
+      name: "Squirtle",
       attributes: [
         {
           trait_type: "BackgroundColor",
           value: "blue",
         },
         {
-          trait_type: "Eyes",
-          value: "googly",
+          trait_type: "Type",
+          value: "Water",
         },
         {
-          trait_type: "Stamina",
+          trait_type: "Level",
+          value: 22,
+        },
+      ],
+    },
+    4: {
+      description: "Its pleasantly aromatic leaves have the ability to check the humidity and temperature.",
+      external_url: "https://www.serebii.net/pokedex-rs/152.shtml", // <-- this can link to a page for the specific file too
+      image: "https://www.serebii.net/art/th/152.png",
+      name: "Chikorita",
+      attributes: [
+        {
+          trait_type: "BackgroundColor",
+          value: "green",
+        },
+        {
+          trait_type: "Type",
+          value: "Grass",
+        },
+        {
+          trait_type: "Level",
           value: 15,
         },
       ],
     },
     5: {
-      description: "So delicate.",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/flamingo.jpg",
-      name: "Flamingo",
+      description: "It usually stays hunched over. If it is angry or surprised, it shoots flames out of its back.",
+      external_url: "https://www.serebii.net/pokedex-rs/155.shtml", // <-- this can link to a page for the specific file too
+      image: "https://www.serebii.net/art/th/155.png",
+      name: "Cyndaquil",
       attributes: [
         {
           trait_type: "BackgroundColor",
-          value: "black",
+          value: "fire",
         },
         {
-          trait_type: "Eyes",
-          value: "googly",
+          trait_type: "Type",
+          value: "Fire",
         },
         {
-          trait_type: "Stamina",
+          trait_type: "Level",
           value: 6,
         },
       ],
     },
     6: {
-      description: "Raaaar!",
-      external_url: "https://austingriffith.com/portfolio/paintings/", // <-- this can link to a page for the specific file too
-      image: "https://austingriffith.com/images/paintings/godzilla.jpg",
-      name: "Godzilla",
+      description: "It is small but rough and tough. It won't hesitate to take a bite out of anything that moves.",
+      external_url: "https://www.serebii.net/pokedex-rs/158.shtml", // <-- this can link to a page for the specific file too
+      image: "https://www.serebii.net/art/th/158.png",
+      name: "Totodile",
       attributes: [
         {
           trait_type: "BackgroundColor",
-          value: "orange",
+          value: "blue",
         },
         {
-          trait_type: "Eyes",
-          value: "googly",
+          trait_type: "Type",
+          value: "Water",
         },
         {
-          trait_type: "Stamina",
+          trait_type: "Level",
           value: 99,
         },
       ],
@@ -675,230 +675,240 @@ function App() {
       <Header />
       {networkDisplay}
       <BrowserRouter>
-        <Menu style={{ textAlign: "center" }} selectedKeys={[route]} mode="horizontal">
-          <Menu.Item key="/">
-            <Link
-              onClick={() => {
-                setRoute("/");
-              }}
-              to="/"
-            >
-              YourCollectibles
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="/transfers">
-            <Link
-              onClick={() => {
-                setRoute("/transfers");
-              }}
-              to="/transfers"
-            >
-              Transfers
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="/ipfsup">
-            <Link
-              onClick={() => {
-                setRoute("/ipfsup");
-              }}
-              to="/ipfsup"
-            >
-              IPFS Upload
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="/ipfsdown">
-            <Link
-              onClick={() => {
-                setRoute("/ipfsdown");
-              }}
-              to="/ipfsdown"
-            >
-              IPFS Download
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="/debugcontracts">
-            <Link
-              onClick={() => {
-                setRoute("/debugcontracts");
-              }}
-              to="/debugcontracts"
-            >
-              Debug Contracts
-            </Link>
-          </Menu.Item>
-        </Menu>
-        <Switch>
-          <Route exact path="/">
-            <div style={{ width: 640, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
-              <Button
-                disabled={minting}
-                shape="round"
-                size="large"
+        <div className="flex">
+          <Menu style={{ textAlign: "center", width: "350px" }} selectedKeys={[route]} mode="inline">
+            <Menu.Item key="/">
+              <Link
                 onClick={() => {
-                  mintItem();
+                  setRoute("/");
                 }}
+                to="/"
               >
-                MINT NFT
-              </Button>
-            </div>
-            <div style={{ width: 640, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
-              <List
-                bordered
-                dataSource={yourCollectibles}
-                renderItem={item => {
-                  const id = item.id.toNumber();
-                  return (
-                    <List.Item key={id + "_" + item.uri + "_" + item.owner}>
-                      <Card
-                        title={
+                YourCollectibles
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="/transfers">
+              <Link
+                onClick={() => {
+                  setRoute("/transfers");
+                }}
+                to="/transfers"
+              >
+                Transfers
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="/ipfsup">
+              <Link
+                onClick={() => {
+                  setRoute("/ipfsup");
+                }}
+                to="/ipfsup"
+              >
+                IPFS Upload
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="/ipfsdown">
+              <Link
+                onClick={() => {
+                  setRoute("/ipfsdown");
+                }}
+                to="/ipfsdown"
+              >
+                IPFS Download
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="/debugcontracts">
+              <Link
+                onClick={() => {
+                  setRoute("/debugcontracts");
+                }}
+                to="/debugcontracts"
+              >
+                Debug Contracts
+              </Link>
+            </Menu.Item>
+          </Menu>
+          <Switch>
+            <Route exact path="/">
+              <div className="flex flex-column width-100">
+                <div style={{ width: 640, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
+                  <Button
+                    disabled={minting}
+                    shape="round"
+                    size="large"
+                    onClick={() => {
+                      mintItem();
+                    }}
+                  >
+                    MINT NFT
+                  </Button>
+                </div>
+                <div style={{ width: 640, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
+                  <List
+                    bordered
+                    dataSource={yourCollectibles}
+                    renderItem={item => {
+                      const id = item.id.toNumber();
+                      return (
+                        <List.Item key={id + "_" + item.uri + "_" + item.owner}>
+                          <Card
+                            title={
+                              <div>
+                                <span style={{ fontSize: 16, marginRight: 8 }}>#{id}</span> {item.name}
+                              </div>
+                            }
+                          >
+                            <div>
+                              <img src={item.image} style={{ maxWidth: 150 }} />
+                            </div>
+                            <div style={{ maxWidth: 150 }}>{item.description}</div>
+                          </Card>
+
                           <div>
-                            <span style={{ fontSize: 16, marginRight: 8 }}>#{id}</span> {item.name}
+                            owner:{" "}
+                            <Address
+                              address={item.owner}
+                              ensProvider={mainnetProvider}
+                              blockExplorer={blockExplorer}
+                              fontSize={16}
+                            />
+                            <AddressInput
+                              ensProvider={mainnetProvider}
+                              placeholder="transfer to address"
+                              value={transferToAddresses[id]}
+                              onChange={newValue => {
+                                const update = {};
+                                update[id] = newValue;
+                                setTransferToAddresses({ ...transferToAddresses, ...update });
+                              }}
+                            />
+                            <Button
+                              onClick={() => {
+                                console.log("writeContracts", writeContracts);
+                                tx(writeContracts.YourCollectible.transferFrom(address, transferToAddresses[id], id));
+                              }}
+                            >
+                              Transfer
+                            </Button>
                           </div>
-                        }
-                      >
-                        <div>
-                          <img src={item.image} style={{ maxWidth: 150 }} />
-                        </div>
-                        <div>{item.description}</div>
-                      </Card>
+                        </List.Item>
+                      );
+                    }}
+                  />
+                </div>
+              </div>
+            </Route>
 
-                      <div>
-                        owner:{" "}
-                        <Address
-                          address={item.owner}
-                          ensProvider={mainnetProvider}
-                          blockExplorer={blockExplorer}
-                          fontSize={16}
-                        />
-                        <AddressInput
-                          ensProvider={mainnetProvider}
-                          placeholder="transfer to address"
-                          value={transferToAddresses[id]}
-                          onChange={newValue => {
-                            const update = {};
-                            update[id] = newValue;
-                            setTransferToAddresses({ ...transferToAddresses, ...update });
-                          }}
-                        />
-                        <Button
-                          onClick={() => {
-                            console.log("writeContracts", writeContracts);
-                            tx(writeContracts.YourCollectible.transferFrom(address, transferToAddresses[id], id));
-                          }}
-                        >
-                          Transfer
-                        </Button>
-                      </div>
-                    </List.Item>
-                  );
-                }}
+            <Route path="/transfers">
+              <div style={{ width: 600, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
+                <List
+                  bordered
+                  dataSource={transferEvents}
+                  renderItem={item => {
+                    return (
+                      <List.Item key={item[0] + "_" + item[1] + "_" + item.blockNumber + "_" + item.args[2].toNumber()}>
+                        <span style={{ fontSize: 16, marginRight: 8 }}>#{item.args[2].toNumber()}</span>
+                        <Address address={item.args[0]} ensProvider={mainnetProvider} fontSize={16} /> =&gt;
+                        <Address address={item.args[1]} ensProvider={mainnetProvider} fontSize={16} />
+                      </List.Item>
+                    );
+                  }}
+                />
+              </div>
+            </Route>
+
+            <Route path="/ipfsup">
+              <div className="flex flex-column align-center width-100">
+                <div style={{ paddingTop: 32, width: 740, margin: "auto", textAlign: "left" }}>
+                  <ReactJson
+                    style={{ padding: 8 }}
+                    src={yourJSON}
+                    theme="pop"
+                    enableClipboard={false}
+                    onEdit={(edit, a) => {
+                      setYourJSON(edit.updated_src);
+                    }}
+                    onAdd={(add, a) => {
+                      setYourJSON(add.updated_src);
+                    }}
+                    onDelete={(del, a) => {
+                      setYourJSON(del.updated_src);
+                    }}
+                  />
+                </div>
+
+                <Button
+                  style={{ margin: 8 }}
+                  loading={sending}
+                  size="large"
+                  shape="round"
+                  type="primary"
+                  className="fit-content"
+                  onClick={async () => {
+                    console.log("UPLOADING...", yourJSON);
+                    setSending(true);
+                    setIpfsHash();
+                    const result = await ipfs.add(JSON.stringify(yourJSON)); // addToIPFS(JSON.stringify(yourJSON))
+                    if (result && result.path) {
+                      setIpfsHash(result.path);
+                    }
+                    setSending(false);
+                    console.log("RESULT:", result);
+                  }}
+                >
+                  Upload to IPFS
+                </Button>
+
+                <div style={{ padding: 16, paddingBottom: 150 }}>{ipfsHash}</div>
+              </div>
+            </Route>
+            <Route path="/ipfsdown">
+              <div className="flex flex-column align-center width-100">
+                <div style={{ paddingTop: 32, width: 740, margin: "auto" }}>
+                  <Input
+                    value={ipfsDownHash}
+                    placeHolder="IPFS hash (like QmadqNw8zkdrrwdtPFK1pLi8PPxmkQ4pDJXY8ozHtz6tZq)"
+                    onChange={e => {
+                      setIpfsDownHash(e.target.value);
+                    }}
+                  />
+                </div>
+                <Button
+                  style={{ margin: 8 }}
+                  loading={sending}
+                  size="large"
+                  shape="round"
+                  type="primary"
+                  className="fit-content"
+                  onClick={async () => {
+                    console.log("DOWNLOADING...", ipfsDownHash);
+                    setDownloading(true);
+                    setIpfsContent();
+                    const result = await getFromIPFS(ipfsDownHash); // addToIPFS(JSON.stringify(yourJSON))
+                    if (result && result.toString) {
+                      setIpfsContent(result.toString());
+                    }
+                    setDownloading(false);
+                  }}
+                >
+                  Download from IPFS
+                </Button>
+
+                <pre style={{ padding: 16, width: 500, margin: "auto", paddingBottom: 150 }}>{ipfsContent}</pre>
+              </div>
+            </Route>
+            <Route path="/debugcontracts">
+              <Contract
+                name="YourCollectible"
+                signer={userSigner}
+                provider={localProvider}
+                address={address}
+                blockExplorer={blockExplorer}
+                contractConfig={contractConfig}
               />
-            </div>
-          </Route>
-
-          <Route path="/transfers">
-            <div style={{ width: 600, margin: "auto", marginTop: 32, paddingBottom: 32 }}>
-              <List
-                bordered
-                dataSource={transferEvents}
-                renderItem={item => {
-                  return (
-                    <List.Item key={item[0] + "_" + item[1] + "_" + item.blockNumber + "_" + item.args[2].toNumber()}>
-                      <span style={{ fontSize: 16, marginRight: 8 }}>#{item.args[2].toNumber()}</span>
-                      <Address address={item.args[0]} ensProvider={mainnetProvider} fontSize={16} /> =&gt;
-                      <Address address={item.args[1]} ensProvider={mainnetProvider} fontSize={16} />
-                    </List.Item>
-                  );
-                }}
-              />
-            </div>
-          </Route>
-
-          <Route path="/ipfsup">
-            <div style={{ paddingTop: 32, width: 740, margin: "auto", textAlign: "left" }}>
-              <ReactJson
-                style={{ padding: 8 }}
-                src={yourJSON}
-                theme="pop"
-                enableClipboard={false}
-                onEdit={(edit, a) => {
-                  setYourJSON(edit.updated_src);
-                }}
-                onAdd={(add, a) => {
-                  setYourJSON(add.updated_src);
-                }}
-                onDelete={(del, a) => {
-                  setYourJSON(del.updated_src);
-                }}
-              />
-            </div>
-
-            <Button
-              style={{ margin: 8 }}
-              loading={sending}
-              size="large"
-              shape="round"
-              type="primary"
-              onClick={async () => {
-                console.log("UPLOADING...", yourJSON);
-                setSending(true);
-                setIpfsHash();
-                const result = await ipfs.add(JSON.stringify(yourJSON)); // addToIPFS(JSON.stringify(yourJSON))
-                if (result && result.path) {
-                  setIpfsHash(result.path);
-                }
-                setSending(false);
-                console.log("RESULT:", result);
-              }}
-            >
-              Upload to IPFS
-            </Button>
-
-            <div style={{ padding: 16, paddingBottom: 150 }}>{ipfsHash}</div>
-          </Route>
-          <Route path="/ipfsdown">
-            <div style={{ paddingTop: 32, width: 740, margin: "auto" }}>
-              <Input
-                value={ipfsDownHash}
-                placeHolder="IPFS hash (like QmadqNw8zkdrrwdtPFK1pLi8PPxmkQ4pDJXY8ozHtz6tZq)"
-                onChange={e => {
-                  setIpfsDownHash(e.target.value);
-                }}
-              />
-            </div>
-            <Button
-              style={{ margin: 8 }}
-              loading={sending}
-              size="large"
-              shape="round"
-              type="primary"
-              onClick={async () => {
-                console.log("DOWNLOADING...", ipfsDownHash);
-                setDownloading(true);
-                setIpfsContent();
-                const result = await getFromIPFS(ipfsDownHash); // addToIPFS(JSON.stringify(yourJSON))
-                if (result && result.toString) {
-                  setIpfsContent(result.toString());
-                }
-                setDownloading(false);
-              }}
-            >
-              Download from IPFS
-            </Button>
-
-            <pre style={{ padding: 16, width: 500, margin: "auto", paddingBottom: 150 }}>{ipfsContent}</pre>
-          </Route>
-          <Route path="/debugcontracts">
-            <Contract
-              name="YourCollectible"
-              signer={userSigner}
-              provider={localProvider}
-              address={address}
-              blockExplorer={blockExplorer}
-              contractConfig={contractConfig}
-            />
-          </Route>
-        </Switch>
+            </Route>
+          </Switch>
+        </div>
       </BrowserRouter>
 
       <ThemeSwitch />
@@ -922,14 +932,14 @@ function App() {
       {/* 🗺 Extra UI like gas price, eth price, faucet, and support: */}
       <div style={{ position: "fixed", textAlign: "left", left: 0, bottom: 20, padding: 10 }}>
         <Row align="middle" gutter={[4, 4]}>
-          <Col span={8}>
+          <Col>
             <Ramp price={price} address={address} networks={NETWORKS} />
           </Col>
 
-          <Col span={8} style={{ textAlign: "center", opacity: 0.8 }}>
+          <Col style={{ textAlign: "center", opacity: 0.8 }}>
             <GasGauge gasPrice={gasPrice} />
           </Col>
-          <Col span={8} style={{ textAlign: "center", opacity: 1 }}>
+          <Col style={{ textAlign: "center", opacity: 1 }}>
             <Button
               onClick={() => {
                 window.open("https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA");
@@ -943,10 +953,7 @@ function App() {
               Support
             </Button>
           </Col>
-        </Row>
-
-        <Row align="middle" gutter={[4, 4]}>
-          <Col span={24}>
+          <Col>
             {
               /*  if the local provider has a signer, let's show the faucet:  */
               faucetAvailable ? (
@@ -956,6 +963,9 @@ function App() {
               )
             }
           </Col>
+        </Row>
+
+        <Row align="middle" gutter={[4, 4]}>
         </Row>
       </div>
     </div>
